@@ -20,6 +20,7 @@ export default async function ProductsPage() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+        <h1 className="text-3xl font-bold text-center mb-8 text-blue-600">janes </h1>
     </section>
   );
 }

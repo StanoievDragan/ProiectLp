@@ -18,6 +18,12 @@ products = [
         "price": 19.99,
         "image": "https://images.unsplash.com/photo-1591348276312-3be32a9c899e?auto=format&fit=crop&w=400&q=80",
     },
+    {
+        "id": 3,
+        "name": "Czuzzz",
+        "price": 51.99,
+        "image": "https://images.unsplash.com/photo-1591348276312-3be32a9c899e?auto=format&fit=crop&w=400&q=80",
+    }
 ]
 
 @app.route('/')
