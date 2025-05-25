@@ -42,9 +42,9 @@ with app.app_context():
             image="https://static.cropp.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/3/2/324DD-49X-001-1-962701_1.jpg"
         ),
         Product(
-            name="item",
+            name="Pantaloni Scurti",
             price=51.99,
-            image="https://picsum.photos/200/300"
+            image="https://static.cropp.com/media/catalog/product/cache/850/a4e40ebdc3e371adff845072e1c73f37/2/3/233CU-09M-050-1-963830_2.jpg"
         ),
         Product(
             name="Random",
