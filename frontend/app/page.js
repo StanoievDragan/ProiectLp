@@ -6,13 +6,13 @@ import { Truck } from "lucide-react";
 export default function Home() {
   return (
     <div className="relative">
-      {/* Announcement Bar */}
+     
       <div className="fixed top-0 left-0 w-full bg-gray-300 text-black py-2 px-4 flex items-center justify-center z-50 text-sm gap-2 mt-20">
       <Truck size={18} className="inline-block" />
        <span className="font-extrabold">Livrare gratuită la comenzile de peste 200 de lei</span>
         </div>
 
-      {/* Hero Section */}
+      
       <section className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden pt-[40px] mt-[59px]">
         <img
           src="/images/lpproiecthome.png"

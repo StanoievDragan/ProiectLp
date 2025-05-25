@@ -34,7 +34,7 @@ export default function CartPage() {
         </div>
       ))}
       <div className="text-right font-bold text-xl mt-6">
-        Total: {total.toFixed(2)} lei
+        Total: {total.toFixed(1)} lei
       </div>
     </div>
   );

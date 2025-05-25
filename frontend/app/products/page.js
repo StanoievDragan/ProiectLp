@@ -68,7 +68,7 @@ export default function ProductsPage() {
         <input
           type="text"
           name="name"
-          placeholder="Product name"
+          placeholder="Nume Produs"
           value={formData.name}
           onChange={handleChange}
           className="w-full p-2 border rounded text-black"
@@ -77,7 +77,7 @@ export default function ProductsPage() {
         <input
           type="number"
           name="price"
-          placeholder="Price"
+          placeholder="Pretul (lei)"
           value={formData.price}
           onChange={handleChange}
           className="w-full p-2 border rounded text-black"
@@ -86,7 +86,7 @@ export default function ProductsPage() {
         <input
           type="text"
           name="image"
-          placeholder="Image URL"
+          placeholder="URL Imagine"
           value={formData.image}
           onChange={handleChange}
           className="w-full p-2 border rounded text-black"
