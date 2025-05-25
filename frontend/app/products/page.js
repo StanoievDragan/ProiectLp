@@ -63,6 +63,7 @@ export default function ProductsPage() {
           ))}
         </div>
       )}
+      <div className="mt-20">
       <form onSubmit={handleSubmit} className="mb-12 max-w-md mx-auto space-y-4">
         <input
           type="text"
@@ -98,6 +99,7 @@ export default function ProductsPage() {
           Add Product
         </button>
       </form>
+      </div>
     </section>
   );
 }

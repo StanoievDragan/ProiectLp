@@ -1,18 +1,32 @@
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
-  // return (
-  //   <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-  //       <img className="" alt="image" src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-  //   </div>
-  // );
-    return(
-        <section>
-            <img className="bg-repeat w-full bg-bottom" alt="image"
-                 src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-7xl font-bold">
+  return (
+    <section className="relative w-full h-[900px] overflow-hidden">
+      <img
+        src="/images/lpproiecthome.png"
+        alt="Home Banner"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-                Your Text Here
-            </p>
-        </section>
-    );
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          20% REDUCERE LA ȚINUTELE DE VARĂ
+        </h1>
+        <p className="text-lg md:text-xl mb-6 text-white">
+          Cele mai bune alegeri pentru antrenamentele tale. Care aduc un plus de energie la fiecare repetare!
+        </p>
+
+        <div className="flex space-x-4">
+          <Link href="/products">
+            <button className="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-gray-200 transition">
+              Cumpără acum
+            </button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }
