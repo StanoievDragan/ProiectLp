@@ -45,7 +45,7 @@ Aplicație de tip **eCommerce** pentru vânzarea de haine, construită cu **Next
 ## 📸 Preview UI
 
 <div style="display: grid; grid-template-columns: auto; row-gap: 10px">
-  <img src="https://i.imgur.com/FSRzGbS.png" width="100%" alt="Preview UI" />
+  <img src="https://imgur.com/a/QRFqOod" width="100%" alt="Preview UI" />
 </div>
 
 ---
