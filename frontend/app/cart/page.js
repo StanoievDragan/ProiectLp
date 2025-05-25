@@ -11,8 +11,8 @@ export default function CartPage() {
   }
 
   return (
-    <div className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600">Your Cart</h1>
+    <div className="p-8 max-w-3xl mx-auto mt-20 text-black">
+      <h1 className="text-3xl font-bold mb-6 text-black">Your Cart</h1>
       {cart.map((item) => (
         <div key={item.id} className="flex items-center justify-between mb-4 border-b pb-4">
           <img src={item.image} className="w-16 h-16 object-cover rounded" alt={item.name} />
@@ -34,7 +34,7 @@ export default function CartPage() {
         </div>
       ))}
       <div className="text-right font-bold text-xl mt-6">
-        Total: ${total.toFixed(2)}
+        Total: {total.toFixed(2)} lei
       </div>
     </div>
   );

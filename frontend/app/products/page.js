@@ -71,7 +71,7 @@ export default function ProductsPage() {
           placeholder="Product name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-black"
           required
         />
         <input
@@ -80,7 +80,7 @@ export default function ProductsPage() {
           placeholder="Price"
           value={formData.price}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-black"
           required
         />
         <input
@@ -89,14 +89,14 @@ export default function ProductsPage() {
           placeholder="Image URL"
           value={formData.image}
           onChange={handleChange}
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded text-black"
           required
         />
         <button
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 padding-top-10 margin-top-10"
         >
-          Add Product
+          Adauga Produs
         </button>
       </form>
       </div>

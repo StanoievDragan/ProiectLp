@@ -21,7 +21,7 @@ export default function Navbar() {
 
         
         <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
+          <Link href="/" className="hover:text-blue-600">Acasa</Link>
           <Link href="/products" className="hover:text-blue-600">Products</Link>
           <Link href="/cart" className="hover:text-blue-600">Cart</Link>
           <Link href="/login" className="hover:text-blue-600">Login</Link>

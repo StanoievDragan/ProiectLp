@@ -77,21 +77,21 @@ export default function ProductDetail() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border px-3 py-2 rounded"
+          className="w-full border px-3 py-2 rounded text-black"
           placeholder="Product Name"
         />
         <input
           type="number"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="w-full border px-3 py-2 rounded"
+          className="w-full border px-3 py-2 rounded text-black"
           placeholder="Price"
         />
         <input
           type="text"
           value={image}
           onChange={(e) => setImage(e.target.value)}
-          className="w-full border px-3 py-2 rounded"
+          className="w-full border px-3 py-2 rounded text-black"
           placeholder="Image URL"
         />
 
@@ -100,14 +100,14 @@ export default function ProductDetail() {
             onClick={handleUpdate}
             className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
           >
-            Update Product
+            Modifica Produs
           </button>
 
           <button
             onClick={handleDelete}
             className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
           >
-            Delete Product
+            Sterge Produs
           </button>
         </div>
       </div>
