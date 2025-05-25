@@ -7,9 +7,9 @@ Aplicație de tip **eCommerce** pentru vânzarea de haine, construită cu **Next
 
 ## 🚀 Funcționalități
 
-- 👤 **Adaugă Angajat** – înregistrează angajați noi
-- 📝 **Editează Angajat** – modifică informațiile existente
-- ❌ **Șterge Angajat** – elimină angajați din sistem
+- 👤 **Adaugă Produs** – înregistrează produse noi
+- 📝 **Editează Produs** – modifică informațiile existente
+- ❌ **Șterge Produs** – elimină produsele din sistem
 - 🔐 **Login & Register** – (în dezvoltare)
 - 📧 **Notificări Email** – (în curs de implementare)
 - 🛡️ **Securitate JWT** – planificat pentru protecția datelor
