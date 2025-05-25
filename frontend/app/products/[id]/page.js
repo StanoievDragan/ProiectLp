@@ -66,7 +66,7 @@ export default function ProductDetail() {
   if (!product) return <p className="p-8 text-center">Loading...</p>;
 
   return (
-    <div className="p-8 max-w-2xl mx-auto">
+    <div className="p-8 max-w-2xl mx-auto mt-20">
       <img
         src={product.image}
         alt={product.name}
