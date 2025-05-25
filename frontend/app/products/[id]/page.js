@@ -7,6 +7,9 @@ export default function ProductDetail() {
   const { id } = useParams();
   const router = useRouter();
   const [product, setProduct] = useState(null);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -14,6 +17,9 @@ export default function ProductDetail() {
       if (res.ok) {
         const data = await res.json();
         setProduct(data);
+        setName(data.name);
+        setPrice(data.price);
+        setImage(data.image);
       } else {
         router.push("/products");
       }
@@ -37,6 +43,26 @@ export default function ProductDetail() {
     }
   };
 
+  const handleUpdate = async () => {
+    const res = await fetch(`http://localhost:5000/products/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        price: parseFloat(price),
+        image,
+      }),
+    });
+
+    if (res.ok) {
+      const updated = await res.json();
+      setProduct(updated);
+      alert("Produs actualizat cu succes!");
+    } else {
+      alert("Eroare la actualizare.");
+    }
+  };
+
   if (!product) return <p className="p-8 text-center">Loading...</p>;
 
   return (
@@ -46,19 +72,45 @@ export default function ProductDetail() {
         alt={product.name}
         className="w-full h-80 object-cover rounded"
       />
-      <h1 className="text-black color text-3xl font-bold mt-6">{product.name}</h1>
-      <p className="text-lg text-gray-600 mt-2">${product.price}</p>
-      <p className="text-md text-gray-700 mt-4">
-      Acesta este un {product.name} de înaltă calitate, perfect pentru utilizarea de zi cu zi. Fabricat din materiale durabile, acest produs oferă confort și stil. Ideal pentru orice ocazie, fie că este vorba de o întâlnire casuală sau de o ieșire în oraș. Cu un design modern și funcțional, acest {product.name} este alegerea perfectă pentru cei care apreciază calitatea și estetica. Nu rata ocazia de a adăuga acest produs versatil la colecția ta!
+      <div className="mt-6 space-y-4">
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full border px-3 py-2 rounded"
+          placeholder="Product Name"
+        />
+        <input
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          className="w-full border px-3 py-2 rounded"
+          placeholder="Price"
+        />
+        <input
+          type="text"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          className="w-full border px-3 py-2 rounded"
+          placeholder="Image URL"
+        />
 
-      </p>
+        <div className="flex gap-4">
+          <button
+            onClick={handleUpdate}
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+          >
+            Update Product
+          </button>
 
-      <button
-        onClick={handleDelete}
-        className="mt-6 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
-      >
-        Delete Product
-      </button>
+          <button
+            onClick={handleDelete}
+            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
+          >
+            Delete Product
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

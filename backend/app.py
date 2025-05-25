@@ -61,6 +61,24 @@ def delete_product(product_id):
     db.session.commit()
     return jsonify({"message": "Product deleted"}), 200
 
+@app.route("/products/<int:product_id>", methods=["PATCH"])
+def update_product(product_id):
+    product = Product.query.get(product_id)
+    if not product:
+        return jsonify({"error": "Product not found"}), 404
+
+    data = request.get_json()
+
+    if "name" in data:
+        product.name = data["name"]
+    if "price" in data:
+        product.price = data["price"]
+    if "image" in data:
+        product.image = data["image"]
+
+    db.session.commit()
+    return jsonify(product.to_dict()), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True)
