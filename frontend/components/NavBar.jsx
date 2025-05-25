@@ -1,23 +1,50 @@
-import Link from 'next/link';
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react"; 
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-white shadow-md fixed w-screen">
+    <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-600"><Link href="/">ProjectLP</Link></h1>
-        <div className="space-x-6 text-gray-700 font-medium">
+        
+        <Link href="/" className="cursor-pointer">
+          <img
+            src="/images/logovaracool.png"
+            alt="logo"
+            className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
+        </Link>
+
+        
+        <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
           <Link href="/" className="hover:text-blue-600">Home</Link>
           <Link href="/products" className="hover:text-blue-600">Products</Link>
           <Link href="/cart" className="hover:text-blue-600">Cart</Link>
           <Link href="/login" className="hover:text-blue-600">Login</Link>
         </div>
-      </div>
-      {/*<div className="bg-amber-50">*/}
-      {/*  <p>*/}
-      {/*    Welcome to my website! This is a paragraph displayed right under the navbar.*/}
-      {/*  </p>*/}
-      {/*</div>*/}
-      </nav>
-  );
 
+        
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-gray-700"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      
+      {isOpen && (
+        <div className="md:hidden bg-white px-4 pb-4 space-y-2 text-gray-700 font-medium">
+          <Link href="/" className="block hover:text-blue-600">Home</Link>
+          <Link href="/products" className="block hover:text-blue-600">Products</Link>
+          <Link href="/cart" className="block hover:text-blue-600">Cart</Link>
+          <Link href="/login" className="block hover:text-blue-600">Login</Link>
+        </div>
+      )}
+    </nav>
+  );
 }
