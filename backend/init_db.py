@@ -3,8 +3,10 @@ from app import db, Product, app
 with app.app_context():
     db.create_all()
 
-    Product.query.delete()
-
+    # Product.query.delete()
+with app.app_context():
+    nritems=Product.query.count()
+if nritems == 0:
     products = [
         Product(
             name="Tricou cu imprimeu",
@@ -66,10 +68,9 @@ with app.app_context():
             price=51.99,
             image="https://cdn.4f.com.pl/media/catalog/product/cache/126134d464c7385b2f5a1c0d60cd5352/4/F/4FALSSS25TFTIF382-20S-M-04.jpg"
         )
-
     ]
 
     db.session.add_all(products)
     db.session.commit()
 
-    print(" Baza de date a fost creată și populată cu succes.")
+print(" Baza de date a fost creată și populată cu succes.")
