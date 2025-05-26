@@ -3,7 +3,6 @@ from app import db, Product, app
 with app.app_context():
     db.create_all()
 
-    # Product.query.delete()
 with app.app_context():
     nritems=Product.query.count()
 if nritems == 0:
