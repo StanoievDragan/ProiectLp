@@ -28,7 +28,7 @@ Aplicație de tip **eCommerce** pentru vânzarea de haine, construită cu **Next
 - **Email-sender** – (în lucru)
 
 ### 🔜 Frontend – Next.js
-- **Next.js 14** – React-based SSR framework
+- **Next.js 15** – React-based SSR framework
 - **React.js** – component-based UI
 - **Tailwind CSS** – framework de stilizare
 - **fetch() API** – pentru integrarea cu Flask backend
